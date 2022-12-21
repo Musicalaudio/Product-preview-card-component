@@ -8,16 +8,105 @@
   --neutral-dark-grayish-blue: hsl(228, 12%, 48%);
   --neutral-white: hsl(0, 0%, 100%);
 
+  /* font family */
+  --ff-accent: "Fraunces", serif;
+  --ff-base: "Montserrat", sans-serif;
+  
+  /* font weights */
+  --fw-regular: 500;
+  --fw-bold: 700;
+  
 }
 
-p{
-  font-size: 14px;
+html{
+  /* set font size to 10px for rem calculations */
+  font-size: 62.5%;
 }
+
+/* general styles */
+
+body{
+  min-height: 100vh;
+  margin: 1.5rem;
+  display: grid;
+  place-content: center;
+
+
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1.4rem;
+  color: var(--neutral-dark-grayish-blue);
+
+  background-color: var(--primary-cream);
+}
+
+/* utilities */
+.accent-font{
+  font-family: var(--ff-accent);
+  font-weight: var(--fw-bold);
+}
+
+/* components */
 
 .card{
-  width: max(375px, 1440px);
+  --text-section-padding: 2.5rem;
+  --content-gap: 1.75rem;
+  background-color: var(--neutral-white);
+  border-radius: .8rem;
+  overflow: hidden;
 }
 
+.card__img{
+  
+}
+
+.card__text-section{
+  display: grid;
+  gap: var(--content-gap);
+  padding: var(--text-section-padding)
+
+}
+
+.card__category{
+  text-transform:uppercase;
+  letter-spacing: .25em;
+}
+
+.card__title{
+  /* font-family: 'Fraunces', serif; */
+  font-size: 3.25rem;
+  line-height: 1;
+  color: var(--neutral-dark-blue);
+}
+
+.card__price{
+  /* font-family: var(--ff-accent);
+  font-weight: var(--fw-bold); */
+  color: var(--primary-dark-cyan)
+}
+
+.card__old-price{
+  font-size: 1rem;
+  text-decoration: line-through;
+}
+
+.card__prices{
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.button{
+  cursor: pointer;
+  padding: 1rem 4rem;
+  border-radius: 7.5px;
+  border: none;
+  text-decoration: none;
+  font-weight: var(--fw-bold);
+  color: var(--neutral-white);
+  background-color: var(--primary-dark-cyan);
+  
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
