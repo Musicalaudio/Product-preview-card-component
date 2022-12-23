@@ -1,6 +1,7 @@
 :root{
   /* primary colours */
   --primary-dark-cyan: hsl(158, 36%, 37%);
+  --primary-button-hover: hsl(158, 36%, 15%);
   --primary-cream: hsl(30, 38%, 92%);
 
   /* neutral colors */
@@ -92,21 +93,26 @@ body{
 .card__price{
   /* font-family: var(--ff-accent);
   font-weight: var(--fw-bold); */
+  font-size: 3.25rem;
   color: var(--primary-dark-cyan)
 }
 
 .card__old-price{
-  font-size: 1rem;
+  /* font-size: 1rem; */
   text-decoration: line-through;
 }
 
 .card__prices{
   display: flex;
-  gap: 1.25rem;
+  gap: 2rem;
   align-items: center;
 }
 
 .button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
   cursor: pointer;
   padding: 1rem 4rem;
   border-radius: 7.5px;
@@ -116,6 +122,17 @@ body{
   color: var(--neutral-white);
   background-color: var(--primary-dark-cyan);
   
+}
+
+.button:hover{
+  background-color: var(--primary-button-hover);
+}
+
+.button[data-icon="shopping-cart"]::before{
+  content: "";
+  background-image: url(../images/icon-cart.svg);
+  width: 15px;
+  height: 16px;
 }
 
 .attribution { font-size: 11px; text-align: center; }
