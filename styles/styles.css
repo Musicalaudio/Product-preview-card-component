@@ -32,13 +32,23 @@ body{
   display: grid;
   place-content: center;
 
-
   font-family: var(--ff-base);
   font-weight: var(--fw-regular);
   font-size: 1.4rem;
   color: var(--neutral-dark-grayish-blue);
 
   background-color: var(--primary-cream);
+}
+
+@media (min-width:600px){
+  .card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card__img{
+    width: 100%;
+  }
 }
 
 /* utilities */
@@ -65,11 +75,9 @@ body{
   background-color: var(--neutral-white);
   border-radius: .8rem;
   overflow: hidden;
+  max-width: 590px;
 }
 
-.card__img{
-  
-}
 
 .card__text-section{
   display: grid;
@@ -84,7 +92,6 @@ body{
 }
 
 .card__title{
-  /* font-family: 'Fraunces', serif; */
   font-size: 3.25rem;
   line-height: 1;
   color: var(--neutral-dark-blue);
@@ -111,7 +118,7 @@ body{
 .button{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
   gap: 1rem;
   cursor: pointer;
   padding: 1rem 4rem;
